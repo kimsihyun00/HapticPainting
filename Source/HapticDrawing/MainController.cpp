@@ -96,6 +96,7 @@ void AMainController::Tick(float DeltaTime)
 	/* Keep update cursorPosition in Forcehandler to compute the realtime distance */
 	FHandler->CursorPosition = HHandler->GetActorLocation();
 	FHandler->CursorPosition.X += HHandler->cursor->GetScaledSphereRadius();
+	FHandler->HHandlerRotator = HHandler->GetActorRotation();
 }
 
 void AMainController::SetHapticTurn(FRotator rotator)
